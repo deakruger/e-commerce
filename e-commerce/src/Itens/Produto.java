@@ -1,9 +1,10 @@
 package Itens;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class Produto{
+public class Produto implements Comparable<Produto>{
     protected String nome;
     protected String categoria;
     protected String marca;
@@ -19,6 +20,34 @@ public class Produto{
         setCategoria(categoria);
         setMarca(marca);
         setPreco(preco);
+    }
+
+    public void cadastroProdutos(String nome, String categoria, String marca, Double preco){
+        listarProdutos.add(new Produto(nome, categoria, marca, preco));
+    }
+    
+    @Override
+    public int compareTo(Produto outroProduto) {
+        if(this.preco > outroProduto.getPreco()){
+            return -1;
+        }
+        if(this.preco < outroProduto.getPreco()){
+            return +1;
+        }
+        else{
+        return 0;
+        }
+    }
+
+    public void ordenarProdutos(){
+        Collections.sort(listarProdutos);
+    }
+    
+
+    public void listarProdutos(){
+        for (int i = 0; i < listarProdutos.size(); i++){
+           System.out.println(listarProdutos.get(i));
+        }
     }
 
     public void setNome(String nome){
