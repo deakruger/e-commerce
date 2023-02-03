@@ -1,13 +1,16 @@
 import java.util.Scanner;
+
+import Pessoas.*;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Programa {
     public static void main(String[] args) {
         ArrayList<Produto> produtos = new ArrayList<Produto>();
-        Administrador administrador = new Administrador("admin", "senhaadmin", produtos);
-        UsuarioComum usuario1 = new UsuarioComum("usuario1", "senha1", produtos);
-        UsuarioComum usuario2 = new UsuarioComum("usuario2", "senha2", produtos);
+        // Administrador administrador = new Administrador("admin", "senhaadmin", produtos);
+        // UsuarioComum usuario1 = new UsuarioComum("usuario1", "senha1", ArrayList<produtos>);
+        // UsuarioComum usuario2 = new UsuarioComum("usuario2", "senha2", ArrayList<produtos>);
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Insira o nome de usuário: ");
@@ -53,6 +56,9 @@ class Usuario {
         this.nome = nome;
         this.senha = senha;
         this.produtos = produtos;
+    }
+
+    public Usuario(String nome2, String senha2, String string) {
     }
 
     public String getNome() {

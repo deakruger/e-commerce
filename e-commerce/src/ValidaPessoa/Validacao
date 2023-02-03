@@ -1,0 +1,36 @@
+package ValidaPessoa;
+
+import Usuarios.UsuarioComum;
+import Usuarios.Administrador;
+
+public class Validacao {
+    public Validacao() {
+    }
+
+
+
+
+    
+
+    public static void validaUsuarioComum(String nome, String senha) {
+        UsuarioComum usuario1 = new UsuarioComum("usuario1", "senha1");
+        UsuarioComum usuario2 = new UsuarioComum("usuario2", "senha2");
+        
+        if (!nome.equals(usuario1.getNome()) || !senha1.equals(usuario1.getSenha())) {
+            System.out.println("Usuário ou senha incorreta, tente novamente mais tarde");
+            System.exit(0);
+        }
+
+    }
+
+    public static void validaAdministrador(String nome, String senha) {
+        Administrador administrador = new Administrador("admin", "senhaadmin");
+        
+        if (!nome.equals(administrador.getNome()) || !senha.equals(administrador.getSenha())) {
+                System.out.println("Usuário ou senha incorreta, tente novamente mais tarde");
+                System.exit(0);
+            }
+    
+
+    }
+}

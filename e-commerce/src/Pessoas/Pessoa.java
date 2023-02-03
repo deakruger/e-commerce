@@ -1,9 +1,14 @@
-public class Usuario {
+package Pessoas;
+public class Pessoa {
     private String nome;
     private String senha;
     private String perfil; // pode ser "admin" ou "comum"
 
-    public Usuario(String nome, String senha, String perfil) {
+    public Pessoa(){
+
+    }
+
+    public Pessoa(String nome, String senha, String perfil) {
         this.nome = nome;
         this.senha = senha;
         this.perfil = perfil;
