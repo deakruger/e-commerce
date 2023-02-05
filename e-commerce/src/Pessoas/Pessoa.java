@@ -1,12 +1,28 @@
-public class Usuario {
+package Pessoas;
+
+import java.util.ArrayList;
+
+import Itens.Estoque;
+
+public class Pessoa {
     private String nome;
     private String senha;
     private String perfil; // pode ser "admin" ou "comum"
+    protected ArrayList<Estoque> produtos;
 
-    public Usuario(String nome, String senha, String perfil) {
+    public Pessoa(){
+
+    }
+
+    public Pessoa(String nome, String senha, String perfil) {
         this.nome = nome;
         this.senha = senha;
         this.perfil = perfil;
+    }
+    public Pessoa(String nome, String senha, ArrayList<Estoque> produtos) {
+        this.nome = nome;
+        this.senha = senha;
+        this.produtos = produtos;
     }
 
     // getters e setters
