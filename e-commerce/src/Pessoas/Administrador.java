@@ -16,5 +16,7 @@ public class Administrador extends Pessoa {
         this.cnpj = cnpj;
     }
 
+    
+
 }
 
